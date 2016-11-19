@@ -37,7 +37,7 @@ void drawSphere(int radius) {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     GLUquadricObj *sphere = gluNewQuadric();
     gluQuadricDrawStyle(sphere, GLU_FILL);
-    gluQuadricTexture(sphere, TRUE);
+    gluQuadricTexture(sphere, true);
     gluQuadricNormals(sphere, GLU_SMOOTH);
     gluSphere(sphere, radius, 1024, 1024);
 }
@@ -58,7 +58,7 @@ void display() {
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GL_DOUBLE | GL_RGB | GL_DEPTH);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(500, 500);
     glutCreateWindow("Title");
